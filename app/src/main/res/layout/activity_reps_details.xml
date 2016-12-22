@@ -62,6 +62,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:autoLink="phone"
                 android:id="@+id/tv_phone_office"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,6 +85,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:autoLink="email"
                 android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
