@@ -22,14 +22,13 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".FindMyRepsActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-
-            ></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".RepsListActivity" />
+        <activity android:name=".RepsDetailsActivity" />
+        <activity android:name=".ContentActivity"></activity>
     </application>
 
 </manifest>

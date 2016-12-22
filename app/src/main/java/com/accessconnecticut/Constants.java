@@ -13,4 +13,8 @@ public class Constants {
     public static final String HOST_URL = "https://openstates.org/api/v1/";
     public static final String API_GET_LEGISLATORS ="legislators/geo/";
 
+    public static final String BILL ="bill";
+    public static final String FACTS ="facts";
+    public static final String POSITION_STATEMENT ="position_statement";
+
 }
