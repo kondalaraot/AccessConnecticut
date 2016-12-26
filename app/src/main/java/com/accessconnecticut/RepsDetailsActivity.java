@@ -19,6 +19,8 @@ public class RepsDetailsActivity extends AppCompatActivity {
     private TextView mTvLabelOfficeAddress;
     private TextView mTvDistrictAddress;
     private TextView mTvEmail;
+    private TextView mTvEmailDistrict;
+    private TextView mTvPhoneDistrict;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,27 +36,36 @@ public class RepsDetailsActivity extends AppCompatActivity {
     private void populateDetails() {
          String capitolAddress = "";
          String capitolEmail = "";
+         String capitolPhone = "";
          String disctrictAddress = "";
+         String disctrictEmail = "";
+         String disctrictPhone = "";
 
-        mNetworkImageView.setDefaultImageResId(R.drawable.connecticut_seal_120x120);
+        mNetworkImageView.setDefaultImageResId(R.drawable.default_user);
         mNetworkImageView.setImageUrl(legislators.getPhoto_url(),NetworkManager.getInstance(this).getImageLoader());
         mTvDemocraticDistrict.setText(legislators.getParty()+" - "+"Representative - "+" District "+legislators.getDistrict());
-        mTvPhoneOffice.setText(legislators.getOffice_phone());
 
         List<Office> offices = legislators.getOffices();
         for (Office office : offices) {
             if(office.getName().equalsIgnoreCase("Capitol Office")){
                 capitolAddress = office.getAddress();
                 capitolEmail = office.getEmail();
+                capitolPhone = office.getPhone();
             }
             if(office.getName().equalsIgnoreCase("District Office")){
                 disctrictAddress = office.getAddress();
+                disctrictEmail = office.getEmail();
+                disctrictPhone = office.getPhone();
             }
 
         }
         mTvEmail.setText(capitolEmail);
         mTvOfficeAddress.setText(capitolAddress);
+        mTvPhoneOffice.setText(capitolPhone);
+
         mTvDistrictAddress.setText(disctrictAddress);
+        mTvEmailDistrict.setText(disctrictEmail);
+        mTvPhoneDistrict.setText(disctrictPhone);
 
 
     }
@@ -75,5 +86,7 @@ public class RepsDetailsActivity extends AppCompatActivity {
         mTvLabelOfficeAddress = (TextView)findViewById( R.id.tv_label_office_address );
         mTvDistrictAddress = (TextView)findViewById( R.id.tv_district_address );
         mTvEmail = (TextView)findViewById( R.id.tv_email );
+        mTvPhoneDistrict = (TextView)findViewById( R.id.tv_phone_district );
+        mTvEmailDistrict = (TextView)findViewById( R.id.tv_email_district );
     }
 }

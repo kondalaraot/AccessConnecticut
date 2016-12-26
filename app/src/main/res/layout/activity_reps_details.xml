@@ -123,6 +123,53 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="235 blue hills" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone: "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:autoLink="phone"
+                android:id="@+id/tv_phone_district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 860"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:autoLink="email"
+                android:id="@+id/tv_email_district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 860"
+                android:textColor="@android:color/holo_orange_light"
+
+                />
+        </LinearLayout>
     </LinearLayout>
 
 

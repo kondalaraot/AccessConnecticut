@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,12 +40,14 @@ public class FindMyRepsActivity extends BaseAppCompatActivity {
     private double latitude;
     private double longitude;
     EditText edSearch;
+    Button btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_my_reps);
         edSearch = (EditText) findViewById(R.id.ed_search);
+        btnSearch = (Button) findViewById(R.id.btn_search);
 
         edSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -53,6 +57,12 @@ public class FindMyRepsActivity extends BaseAppCompatActivity {
                     return true;
                 }
                 return false;
+            }
+        });
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getLocationFromZip();
             }
         });
 
@@ -95,6 +105,7 @@ public class FindMyRepsActivity extends BaseAppCompatActivity {
         } catch (IOException e) {
             // handle exception
             e.printStackTrace();
+
         }
     }
 

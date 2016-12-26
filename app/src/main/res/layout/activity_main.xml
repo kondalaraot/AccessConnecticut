@@ -29,6 +29,7 @@
                 app:srcCompat="@drawable/find_my_reps_120x120" />
 
             <TextView
+
                 android:layout_marginTop="10dp"
                 android:id="@+id/textViewFindMyReps"
                 android:layout_width="match_parent"
@@ -49,6 +50,7 @@
                 app:srcCompat="@drawable/the_bill_image_120x120" />
 
             <TextView
+
                 android:layout_marginTop="10dp"
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
@@ -95,6 +97,7 @@
                 app:srcCompat="@drawable/position_statement_image_120x120" />
 
             <TextView
+
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,12 +123,13 @@
                 android:id="@+id/imageViewfaceBook"
                 app:srcCompat="@drawable/facebook_120x120" />
 
-           <!-- <TextView
+            <TextView
+
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Facts" />-->
+                android:text="Facebook" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,12 +143,13 @@
                 android:id="@+id/imageViewTwitter"
                 app:srcCompat="@drawable/twitter_120x120" />
 
-         <!--   <TextView
+            <TextView
+
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Position Statement" />-->
+                android:text="Twitter" />
         </LinearLayout>
     </LinearLayout>
 

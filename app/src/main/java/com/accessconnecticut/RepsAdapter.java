@@ -47,7 +47,7 @@ public class RepsAdapter extends ArrayAdapter<Legislators>{
             holder = (ViewHolder) view.getTag();
         }
         holder.name.setText(legislator.getFull_name());
-        holder.networkImageView.setDefaultImageResId(R.drawable.connecticut_seal_120x120);
+        holder.networkImageView.setDefaultImageResId(R.drawable.default_user);
        holder.networkImageView.setImageUrl(legislator.getPhoto_url(),NetworkManager.getInstance().getImageLoader());
 
         return view;
