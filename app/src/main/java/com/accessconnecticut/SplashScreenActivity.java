@@ -41,19 +41,21 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         imageView.setAnimation(zoomin);
 
+
 //        imageView.setAnimation(zoomin);
 
-        /*zoomin.setAnimationListener(new Animation.AnimationListener() {
+        zoomin.setAnimationListener(new Animation.AnimationListener() {
 
             @Override
             public void onAnimationStart(Animation arg0) {
                 // TODO Auto-generated method stub
-
+                arg0.setStartOffset(2000);
             }
 
             @Override
             public void onAnimationRepeat(Animation arg0) {
                 // TODO Auto-generated method stub
+                arg0.setStartOffset(2000);
 
             }
 
@@ -62,7 +64,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 imageView.startAnimation(zoomout);
 
             }
-        });*/
+        });
 
         /*zoomout.setAnimationListener(new Animation.AnimationListener() {
 
