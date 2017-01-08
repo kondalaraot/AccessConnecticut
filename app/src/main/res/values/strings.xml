@@ -134,4 +134,18 @@ Access to Original Birth Certificates</h1>
         ]]>
     </string>
 
+    <string name="email_body" formatted="true">
+
+          <![CDATA[
+          I am a constituent who resides in your district. I am writing you today to ask for your support of a bill to restore the right of adult adoptees adopted before October 1, 1983 to have access to their original birth certificates. This right existed for all adult adoptees, and for adoptive parents of minor adoptees, before 1975.
+
+\n The bill would extend Public Act 14-133, passed in 2014, which allows adult adoptees born and adopted in Connecticut after October 1, 1983 to obtain their original birth certificates. It is important to note that, if passed, this bill would simply extend a system in place under existing law.
+
+\n I believe it is a basic human right to know the truth about his or her origins. The government should not discriminate against adoptees by depriving them of this right which is routinely available to all non-adopted citizens. This information assists adoptees in obtaining their current, updated family medical history which is necessary to protect their health and the health of their children.
+
+\n I urge you to vote in favor of equal access to original birth certificates to provide adult adoptees equal rights under the law, and to help them make informed decisions in protecting their health.
+
+        ]]>
+    </string>
+
 </resources>

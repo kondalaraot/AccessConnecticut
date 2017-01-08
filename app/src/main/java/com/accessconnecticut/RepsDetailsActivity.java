@@ -1,7 +1,9 @@
 package com.accessconnecticut;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,6 +23,10 @@ public class RepsDetailsActivity extends AppCompatActivity {
     private TextView mTvEmail;
     private TextView mTvEmailDistrict;
     private TextView mTvPhoneDistrict;
+    private TextView mTvLabelSearch;
+
+    String mEmailCC = "info@accessconnecticut.org";
+    String mEmailSubject = "Please support Adoptee Rights Bill!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +66,41 @@ public class RepsDetailsActivity extends AppCompatActivity {
 
         }
         mTvEmail.setText(capitolEmail);
+        final String finalCapitolEmail = capitolEmail;
+        mTvEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String body = getResources().getString(R.string.email_body);
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/html");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { finalCapitolEmail });
+                intent.putExtra(Intent.EXTRA_SUBJECT, mEmailSubject);
+                intent.putExtra(Intent.EXTRA_TEXT, body);
+                intent.putExtra(Intent.EXTRA_CC, new String[] { mEmailCC });
+                startActivity(Intent.createChooser(intent, "Send Email"));
+            }
+        });
+
         mTvOfficeAddress.setText(capitolAddress);
         mTvPhoneOffice.setText(capitolPhone);
 
         mTvDistrictAddress.setText(disctrictAddress);
         mTvEmailDistrict.setText(disctrictEmail);
+        final String finalDisctrictEmail = disctrictEmail;
+        mTvEmailDistrict.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String body = getResources().getString(R.string.email_body);
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/html");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { finalDisctrictEmail });
+                intent.putExtra(Intent.EXTRA_SUBJECT, mEmailSubject);
+                intent.putExtra(Intent.EXTRA_TEXT, body);
+                intent.putExtra(Intent.EXTRA_CC, new String[] { mEmailCC });
+
+                startActivity(Intent.createChooser(intent, "Send Email"));
+            }
+        });
         mTvPhoneDistrict.setText(disctrictPhone);
 
 
@@ -78,6 +114,7 @@ public class RepsDetailsActivity extends AppCompatActivity {
      */
     private void findViews() {
         mNetworkImageView = (NetworkImageViewRounded)findViewById( R.id.network_image_view );
+//        mTvLabelSearch = (TextView)findViewById( R.id.tv_label_search );
         mTvDemocraticDistrict = (TextView)findViewById( R.id.tv_democratic_district );
         mTvLabelDistrictAddress = (TextView)findViewById( R.id.tv_label_district_address );
         mLlOfcAddress = (LinearLayout)findViewById( R.id.ll_ofc_address );
@@ -88,5 +125,7 @@ public class RepsDetailsActivity extends AppCompatActivity {
         mTvEmail = (TextView)findViewById( R.id.tv_email );
         mTvPhoneDistrict = (TextView)findViewById( R.id.tv_phone_district );
         mTvEmailDistrict = (TextView)findViewById( R.id.tv_email_district );
+
+
     }
 }

@@ -20,16 +20,24 @@
         android:id="@+id/imageView" />
 
     <TextView
+        android:autoLink="all"
         android:id="@+id/tv_label_search"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageView"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your ZIP code "/>
+        android:text="click here to search with address "/>
+
+    <View
+        android:layout_below="@+id/tv_label_search"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
 
     <EditText
+        android:visibility="gone"
         android:maxLines="1"
         android:imeOptions="actionSearch"
         android:inputType="text"
@@ -40,6 +48,7 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:visibility="gone"
         android:layout_marginTop="5dp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:textColor="@android:color/darker_gray"

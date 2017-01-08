@@ -28,6 +28,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.poi/poi
     compile 'com.github.erd:android-volley:1.0.0'
     compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.android.gms:play-services-places:9.8.0'
+
 
     testCompile 'junit:junit:4.12'
 }

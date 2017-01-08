@@ -14,7 +14,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/round_circle"
+        android:src="@drawable/splash_screen_180x180"
          android:layout_centerInParent="true"
         android:id="@+id/imageView" />
     <!--        android:src="@drawable/splash_screen_180x180"
