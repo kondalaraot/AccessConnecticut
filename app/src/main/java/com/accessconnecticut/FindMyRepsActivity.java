@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,6 +58,7 @@ public class FindMyRepsActivity extends BaseAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_my_reps);
+        ImageView findRepsImageView = (ImageView) findViewById(R.id.imageView);
         edSearch = (EditText) findViewById(R.id.ed_search);
         btnSearch = (Button) findViewById(R.id.btn_search);
         TextView tvSearch = (TextView) findViewById(R.id.tv_label_search);
@@ -68,7 +70,13 @@ public class FindMyRepsActivity extends BaseAppCompatActivity {
             }
         });
 
+        findRepsImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAutocompleteActivity();
 
+            }
+        });
         edSearch.setInputType(InputType.TYPE_NULL);
 
         edSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
